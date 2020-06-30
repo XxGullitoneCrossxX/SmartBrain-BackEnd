@@ -35,6 +35,9 @@ postgres.transaction( trx => {
 });
 
  })
+.catch(error =>  {
+  res.status(400).json('UNABLE TO REGISTER @(Login)');
+});
 }
 
 module.exports = {
