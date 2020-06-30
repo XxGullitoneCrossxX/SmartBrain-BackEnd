@@ -36,7 +36,7 @@ postgres.transaction( trx => {
 
  })
 .catch(error =>  {
-  res.status(400).json('UNABLE TO REGISTER @(Login)');
+  res.status(400).json('UNABLE TO REGISTER @(Database Connection Failed)');
 });
 }
 
