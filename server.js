@@ -15,12 +15,16 @@ const appImage = new Clarifai.App({apiKey: '6e0d007842fe431bbf3a8ee8e3480eb7'});
 
 const postgres = knex({
   client: 'pg',
-  connection: {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+  /*connection: {
     host : '127.0.0.1',
     user : '',
     password : '',
     database : 'smart-brains'
-  }
+  }*/
 });
 
 console.log(postgres.select('*').from('users').then( data => {
