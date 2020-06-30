@@ -27,6 +27,11 @@ console.log(postgres.select('*').from('users').then( data => {
 	console.log(data);
 }));
 
+
+app.get('/', (req,res) =>{
+	res.json ('The Home Of API');
+} );
+
 app.use(bodyParser.json()); //MIDDLEWARE TO USE JSON PARSER to automatically convert it into objects
 app.use(cors());
 
