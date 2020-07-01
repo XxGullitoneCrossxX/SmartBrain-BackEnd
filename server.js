@@ -10,7 +10,7 @@ const profile = require('./controller/profile.js');
 const image = require('./controller/image.js');
 const Clarifai = require('clarifai');
 
-const appImage = new Clarifai.App({apiKey: '6e0d007842fe431bbf3a8ee8e3480eb7'});
+const appImage = new Clarifai.App({apiKey: process.env.API_CLARIFAI});
 
 
 const postgres = knex({
